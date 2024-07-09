@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Burger King Pocket-Fit Campaign</title>
+    <link href="https://db.onlinewebfonts.com/c/565a681be0eb6f1d92c6bc57c629ea35?family=Flame+Bold" rel="stylesheet">
+    <!-- <title>Document</title> -->
+
+    <style>
+
+        ::-webkit-scrollbar{
+            display: none;
+        }
+     .overlay-content {
+      display: flex;
+      background-color: #e4d8c5;
+      font-family: 'Flame Sans', sans-serif;
+    }
+
+    .overlay-content-basic {
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .overlay-content>div {
+      flex: 1;
+      width: 500px;
+    }
+
+    .overlay-content-bg-image {
+      background-image: url('https://api-customization.s3.eu-central-1.amazonaws.com/public/assets/Vdk0wt3PJEy9Mf/WebAppProject/home_background.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 100%;
+    }
+
+    .overlay-bg-image-ss {
+      min-height: 300px;
+      width: 100%;
+    }
+
+    .overlay-content-form {
+      display: flex;
+  flex-direction: column;
+  width: 100%;
+  width: calc(100% - 20px);
+  align-items: center;
+  min-width: 300px;
+}
+    
+
+    .overlay-content h1 {
+      font-family: 'Flame Bold', sans-serif;
+      font-weight: 500;
+      text-align: center;
+    }
+
+    .overlay-content span {
+      font-family: 'Flame Bold', sans-serif;
+      font-size: 20px;
+    }
+
+    .overlay-content p {
+      font-size: clamp(14px , 2vw, 20px);
+      /* margin-bottom: 30px; */
+    }
+
+    .form-container {
+      padding: 10px;
+      position: relative;
+      width: 80%;
+    }
+
+    /* .form-container  */
+
+    .primary_color {
+      color: #472016;
+    }
+
+    
+
+    .label-before {
+	line-height: 20px;
+	font-size: 12px;
+	top: -5px;
+  color: #472016;
+	/* padding: 0 6px; */
+	left: 0px;
+}
+
+  
+
+    .form-container input[type="submit"] {
+      background-color: #d62300;
+      color: #fff;
+      font-size: 14px;
+      font-family: "Flame Bold", "sans-serif";
+      cursor: pointer;
+      width: 100%;
+      padding: 15px 0;
+      margin-bottom: 20px;
+      border-radius: 30px;
+      border-bottom: none;
+      border-style: none;
+      font-weight: 500;
+    }
+
+    .error-message {
+      font-size: 12px !important;
+      margin-bottom: 0;
+
+    }
+
+    .form_article {
+      max-width: 80%;
+      margin: 10px;
+      display: flex;
+      flex-direction: column;
+      line-height: 25px;
+    }
+
+    .relative {
+      position: relative;
+    }
+
+    .flex-opt {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .label-before, .field input:focus + label::before, .field input:valid + label::before {
+  line-height: 20px;
+  font-size: 12px;
+  top: -10px;
+  background: #e4d8c5;
+  /* border: 1px solid #472016; */
+  color: #472016;
+  padding: 0 6px;
+  left: 12px;
+  z-index: 1;
+}
+
+
+
+.field {
+  position: relative;
+  margin-bottom: 15px;
+}
+.field label::before {
+  content: attr(title);
+  position: absolute;
+  top: 5px;
+  left: 12px;
+  line-height: 40px;
+  font-size: 14px;
+  color: #777;
+  transition: 300ms all;
+}
+.field input {
+  width: 100%;
+  line-height: 40px;
+ font-family: inherit;
+  box-sizing: border-box;
+  font-size: 14px;
+  border-radius: 3px;
+  background: transparent;
+  outline: none;
+  padding: 10px 0;
+  color: #222;
+  border: none;
+  border-bottom: 1px solid #472016;
+  text-indent: 15px;
+  /* border-radius: 3px; */
+  
+}
+.field input:focus {
+  outline: 0;
+  border-color: #472016;
+  border: 1px solid #472016;
+  /* background: #ffffff52; */
+
+  /* z-index: 2; */
+}
+.field input:valid + label::before {
+  content: attr(data-title);
+}
+.field input:focus + label::before {
+  color: #472016;
+}
+
+
+
+    #overlay-form{
+      display: flex;
+      /* align-items: center; */
+      justify-content: center;
+      flex-direction: column;
+      /* padding: 20px; */
+      gap: 10px;
+    }
+    /* Media query for large screens */
+    @media only screen and (min-width: 1024px) {
+      .overlay-content-container {
+        max-width: 1024px;
+      }
+      .overlay-content h1 {
+      font-family: 'Flame Bold', sans-serif;
+      font-weight: 500;
+      text-align: left;
+    }
+    }
+
+    @media only screen and (max-width: 800px) {
+      .overlay-content {
+        flex-direction: column;
+      }
+      .overlay-content h1 {
+      font-family: 'Flame Bold', sans-serif;
+      font-weight: 500;
+   
+    }
+    .overlay-content>div {
+      flex: 1;
+      width: 100%;
+    }
+    }
+    
+dialog {
+  border-style: none;
+  padding: 10px;
+  box-sizing: border-box;
+  content: normal;
+  opacity: 0;
+  display: block;
+  scale: 0;
+  transition: all 400ms ease;
+  font-family: open sans;
+  border-radius: 10px;
+}
+
+dialog[open] {
+  opacity: 1;
+  scale: 1;
+}
+
+dialog::backdrop {
+  background: #0000005f;
+  backdrop-filter: blur(10px);
+}
+    </style>
+</head>
+
+<body>
+    <dialog id="one" >
+        <div class="modal-container">
+            <div class="overlay-content overlay-content-basic">
+                <div class="overlay-content-bg-image overlay-bg-image-ss"></div>
+                <div class="overlay-content-form relative">
+                  
+                  <div class="form_article">
+                    <h1 class="primary_color">Congratulations!</h1>
+                    <p>Fill in your details to claim your free drink and chips <span class="primary_color">#BasedOnYourPocket.</span></p>
+                  </div>
+        
+                  <div class="form-container">
+                    <form id="overlay-form">
+                      <div  class="field flex-opt">
+                        <input type="text" name="name" required autocomplete="off">
+                        <label for="name" title="Name" data-title="name" class="primary_color"></label>
+                      </div>
+                      <div class="field  flex-opt">
+                        <input type="text" name="phone" pattern="[0-9]*" required>
+                        <label for="phone" title="Phone" data-title="Phone" class="primary_color"></label>
+                        <p class="error-message" style="display: none;"></p>
+                      </div>
+        
+                      <div class="field  flex-opt">
+                        <input type="email" name="email"  required autocomplete="off">
+                        <label for="email" title="Email" data-title="Email"></label>
+                      </div>
+        
+                      <input type="submit" value="Claim Now">
+                    </form>
+                  </div>
+        
+                 
+                </div>
+              </div>
+          
+        </div>
+        <!-- <button onclick="one.close()">close</button> -->
+    </dialog>
+
+    <!-- <button onclick="one.showModal()">click me</button> -->
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            one.showModal()
+        })
+    </script>
+
+</body>
+
+</html>
